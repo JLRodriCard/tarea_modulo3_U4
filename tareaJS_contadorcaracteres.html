@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contador de caracteres</title>
+</head>
+
+<body>
+
+    <div>
+        <textarea class="form-control" id="txt" rows="5" maxLength="100" style="background-color: rgb(240, 237, 63);"></textarea>
+        <p> Caracteres: <div id="cajatexto" style="color: rgb(140, 0, 255);"></div></p>
+    </div>
+
+    <script>
+        function contadorCaracteres() {
+            var textArea = document.getElementById('txt').value;
+            var c = textArea.length;
+            if (c > 100) {
+                document.getElementById('cajatexto').innerHTML = "Solo permite 100 caracteres";
+            } else if (c > 10) {
+                document.getElementById('cajatexto').innerHTML = '<span style="color: blue;">' + c + '</span>';
+            } else {
+                document.getElementById('cajatexto').innerHTML = c;
+            }
+        }
+        var el = document.getElementById('txt');
+        el.addEventListener('keyup', contadorCaracteres, false);
+
+    </script>
+
+
+</body>
+
+</html>

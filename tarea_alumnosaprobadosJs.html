@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea alumnos aprobados - array</title>
+</head>
+
+<body>
+
+    <h2> ALUMNOS APROBADOS</h2>
+
+    <div style="background-color: aqua;border-color: black;border-style: solid;margin-right: 70%;">
+
+        <script>
+            const alumnos = [
+
+                {
+
+                    nombre: 'Juan Gomez',
+
+                    nota: 7
+
+                }, {
+
+                    nombre: 'Pedro Rodriguez',
+
+                    nota: 4
+
+                }, {
+
+                    nombre: 'Roxana García',
+
+                    nota: 8
+
+                }, {
+
+                    nombre: 'Luciano Lopez',
+
+                    nota: 5
+
+                }, {
+
+                    nombre: 'Fernanda Gimenez',
+
+                    nota: 6
+
+                }, {
+
+                    nombre: 'Florencia Martinez',
+
+                    nota: 10
+
+                }, {
+
+                    nombre: 'Raul Sanchez',
+
+                    nota: 7
+
+                }, {
+
+                    nombre: 'Sandra Figueroa',
+
+                    nota: 8
+
+                },{
+
+                nombre: 'Diego Solis',
+
+                nota: 10
+
+                },{
+
+                nombre: 'Thiago Rodriguez',
+
+                nota: 10}
+
+
+            ];
+
+            const aprobados = alumnos.filter(function (alumno) {
+                return alumno.nota >= 7;
+            });
+
+            console.log(aprobados);
+            console.log(`${aprobados.length} aprobados`);
+
+            for (let i = 0; i < aprobados.length; i++) {
+                document.write(`<p>Alumno:${aprobados[i].nombre}, - Nota: ${aprobados[i].nota}</p>`)
+            }
+
+        </script>
+
+    </div>
+
+    <h2> ALUMNOS DESAPROBADOS</h2>
+
+    <div style="background-color: rgb(255, 247, 0);border-color: black;border-style: solid;margin-right: 70%;">
+
+        <script>
+            const alumnos2 = [
+
+                {
+
+                    nombre: 'Juan Gomez',
+
+                    nota: 7
+
+                }, {
+
+                    nombre: 'Pedro Rodriguez',
+
+                    nota: 4
+
+                }, {
+
+                    nombre: 'Roxana García',
+
+                    nota: 8
+
+                }, {
+
+                    nombre: 'Luciano Lopez',
+
+                    nota: 5
+
+                }, {
+
+                    nombre: 'Fernanda Gimenez',
+
+                    nota: 6
+
+                }, {
+
+                    nombre: 'Florencia Martinez',
+
+                    nota: 10
+
+                }, {
+
+                    nombre: 'Raul Sanchez',
+
+                    nota: 7
+
+                }, {
+
+                    nombre: 'Sandra Figueroa',
+
+                    nota: 8
+
+                },{
+
+                nombre: 'Diego Solis',
+
+                nota: 10
+
+                },{
+
+                nombre: 'Thiago Rodriguez',
+
+                nota: 10}
+
+
+            ];
+
+            const desaprobados = alumnos2.filter(function (alumno) {
+                return alumno.nota <= 6;
+            });
+
+            console.log(desaprobados);
+            console.log(`${desaprobados.length} desaprobados`);
+
+            for (let i = 0; i < desaprobados.length; i++) {
+                document.write(`<p>Alumno:${desaprobados[i].nombre}, - Nota: ${desaprobados[i].nota}</p>`)
+            }
+
+        </script>
+
+    </div>
+</body>
+</body>
+
+</html>
